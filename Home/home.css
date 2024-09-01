@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    border: none;
+}
+
+:root{
+    --backgroundColor: rgba(0, 0, 0, 0.300);
+    --backgroundColor2: rgba(0, 0, 0, 0.600);
+    --mainColor: greenyellow;
+} 
+
+.backgroundContainer{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    object-fit: cover;
+}
+
+#customAlert{
+    display:none; 
+    position:fixed; 
+    bottom:10%; 
+    right:15%; 
+    background-color: var(--backgroundColor); 
+    color:var(--mainColor); 
+    padding:10px; 
+    border-radius:5px;
+}
+
+.mainHeaderContainer{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--backgroundColor2);
+    text-align: center;
+    box-shadow: 1px 1px 20px var(--mainColor);
+    border-bottom: 3px solid var(--mainColor);
+}
+
+.mainHeader{
+    position: relative;
+    width: fit-content;
+    color: white;
+    margin: auto;
+    margin-top: 0.5em;
+    font-size: 200%;
+    text-shadow: 2px 2px 5px black;
+}
+
+.mainText{
+    position: relative;
+    color: var(--mainColor);
+    font-size: large;
+}
+
+.selectionContainer{
+    position: relative;
+    display: grid;
+    row-gap: 3rem;
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 55%;
+}
+
+.selection{
+    width: 100%;
+    height: 22dvh;
+    text-decoration: none;
+}
+
+.selectionText{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+#option1{
+    background-image: url(../Images/gutsSideProfile.jpg);
+    background-position: 50% 60%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: all .5s;
+    object-fit: cover;
+}
+
+#option2{
+    background-image: url(../Images/cascaSideProfile.webp);
+    background-position: 50% 60%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: all .5s;
+}
+
+#option1:hover{
+    background-image: url(../Images/gutsFrontProfile.jpg);
+    transition: all .5s;
+}
+
+#option2:hover{
+    background-image: url(../Images/cascaFrontProfile.webp);
+    transition: all .5s;
+}
+
+.navBar{
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    bottom: 0;
+    background-color: var(--backgroundColor2);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#activeAnchor{
+    color: var(--mainColor);
+}
+
+.anchor{
+    margin: auto;
+    padding: 1rem;
+    width: 33%;
+    background-color: var(--backgroundColor);
+    border-top: 3px solid transparent;
+    transition: all .2s;
+    color: white;
+    font-size: xx-large;
+}
+
+.anchor:hover{
+    border-top: 3px solid var(--mainColor);
+    box-shadow: var(--mainColor) 0px -11px 10px -5px;
+    transition: all .2s;
+    color: var(--mainColor);
+}
